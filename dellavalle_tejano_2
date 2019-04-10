@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Challenge: A picture-perfect trip</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>CENTRO STORICO NAPOLI</h1>
+               <h2>Mappa concettuale, 4 Aprile</h2>
+        
+        <p> 1. Via dei Tribunali </p>
+        <img src="https://www.google.it/maps/vt/data=lKDNSL5RjkJefKDIQinEB88G1fbGsz1pAFvGe8_TE5EvDRqSjAfzJxHYy_2G_6dui7NscyqOjZTo0ZUF1oygQHL4b7xxRjydx9ZcYk1zedAd2I9-mZhXHPl8QKSVzDbFFdpbgl7FRBBNGe1NGVoU5hJh0XavR0C-Yb_iGHlghotKoeLrGGeOyDnV1Xh54WvPhruAHP9FniM3pgelzX6UbbaWIqcicv3XoKZZhlk" width="300">
+        
+        <p> 2. E' popolata </p>
+        
+        <p> 3. Duomo </p>
+        <img src="https://t-ec.bstatic.com/images/hotel/max1024x768/163/163553959.jpg" width="300">
+        
+        <p> 4. Reliquie di San Gennaro </p>
+        <img src="https://media-cdn.tripadvisor.com/media/photo-s/10/dd/e3/a0/cappella-delle-reliquie.jpg" width="300">
+        
+        <p> 5. Miracolo </p>
+        
+    </body>
+</html>
