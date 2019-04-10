@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Challenge: A picture-perfect trip</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Centro Storico Napoli</h1>
+                <h2>Mappa concettuale, 4 Aprile</h2>
+        
+        <p>1. San Biagio dei Librai</p>
+        
+        <p>2. San Gregorio Armeno</p>
+        
+        <p>3. Presepi tutto l'anno </p>
+        
+        <p>4. Si tramanda da generazioni</p>
+        
+        <p>5. Tradizioni famiglie napoletane</p>
+        
+        <img src="https://napoli.itineraridellacampania.it/wp-content/uploads/2015/08/san-gregorio-armeno.jpg" width="300">
+        
+    </body>
+</html>
