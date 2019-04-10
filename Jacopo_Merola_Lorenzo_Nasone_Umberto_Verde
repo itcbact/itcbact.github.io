@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html>
+    <head> 
+        <title>Challenge: A picture-perfect trip</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Spaccanapoli</h1>
+        
+        <h1>Mappa concettuale, 4 Aprile</h1>
+        
+        <p>Garibaldi</p> <img src="http://terredicampania.it/wp-content/uploads/2017/08/piazza-garibaldi-rendering-800x445.jpg">
+        
+        <p>Piazza Cavour</p> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Napoli_stazione_Piazza_Cavour_fabbricato.jpg/800px-Napoli_stazione_Piazza_Cavour_fabbricato.jpg">
+        
+        <p>Via Roma</p> <img src="https://www.vesuviolive.it/wp-content/uploads/2018/03/Via-Toledo-600x448.jpg">
+        
+        <p>Sorbillo</p> <img src="https://primochef.it/wp-content/uploads/2019/01/FB_pizzeria_sorbillo.jpg">
+        
+        <p>San Gregorio Armeno</p> <img src="https://media-cdn.tripadvisor.com/media/photo-s/09/d6/f2/1b/via-san-gregorio-armeno.jpg">
+    </body>
+</html>
