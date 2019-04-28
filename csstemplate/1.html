@@ -32,6 +32,9 @@ body {font-family: "Lato", sans-serif}
   </div>
 </div>
 
+
+
+  
 <!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
 <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
   <a href="#band" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">BAND</a>
@@ -182,6 +185,12 @@ body {font-family: "Lato", sans-serif}
   
 <!-- End Page Content -->
 </div>
+ <!-- button click me--> 
+<button onclick="myFunction()">Click me</button>
+<button onclick="myFunction2()">Cliccami</button>
+
+<p id="demo"></p>
+<p id="demo2"></p>
 
 <!-- Image of location/map -->
 <img src="/w3images/map.jpg" class="w3-image w3-greyscale-min" style="width:100%">
@@ -231,6 +240,13 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+//hello world trigger
+function myFunction() {
+  document.getElementById("demo").innerHTML = "Hello World";
+}
+function myFunction2() {
+  document.getElementById("demo2").innerHTML = "Hello World 2";
+}  
 </script>
 
 </body>
