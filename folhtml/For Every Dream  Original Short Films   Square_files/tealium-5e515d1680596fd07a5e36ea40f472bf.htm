@@ -1,0 +1,52 @@
+<html><script src="tealium-5e515d1680596fd07a5e36ea40f472bf_data/utag.js" type="text/javascript" async=""></script><script type="text/javascript">window["_gaUserPrefs"] = { ioo : function() { return true; } }</script><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+  <title>Square Analytics</title>
+</head>
+<body>
+
+<script type="text/javascript">
+var query = window.location.search
+var options = {}
+if (query.length) {
+  query = query.substr(1) // Leading '?'
+  args = query.split('&')
+  for (var i=0; i < args.length; i++) {
+    keyval = args[i].split('=')
+    options[keyval[0]] = decodeURIComponent(keyval[1])
+  }
+}
+
+var env = options['env'] || 'qa'
+var mobile_browser = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ? 1 : 0
+
+var locale_code = options['locale_code']
+locale_code =  locale_code && locale_code.length == 5 ? locale_code.split('-')[1].toLowerCase() : undefined
+var country_code = options['country_code'] || locale_code
+
+var utag_data = {
+  _dc_cat : "",
+  _nanigan_type : "",
+  _nanigan_name : "",
+  _convertro_type : "",
+  page_url : options['page_url'],
+  mat_id : options['mat_id'],
+  user_token: options['user_token'],
+  idfa : options['idfa'],
+  country_code : country_code,
+  mobile_browser : mobile_browser,
+  referrer: options['referrer']
+}
+</script>
+
+<!-- Loading script asynchronously -->
+<script type="text/javascript">
+    (function(a,b,c,d){
+    a='https://tags.tiqcdn.com/utag/square/main/' + (env ? env : 'dev') + '/utag.js';
+    b=document;c='script';d=b.createElement(c);d.src=a;d.type='text/java'+c;d.async=true;
+    a=b.getElementsByTagName(c)[0];a.parentNode.insertBefore(d,a);
+    })();
+</script>
+
+
+
+</body></html>
