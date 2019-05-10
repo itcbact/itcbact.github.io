@@ -84,33 +84,14 @@
 <a href="https://github.com/itcbact/itcbact.github.io/tree/master/AMP/gallery/templates">links</a><br>
           <a href="itcbact.github.io/AMP/land-see/templates/kim-myeong.amp.html">links</a><br>
     
-    <a href="https://github.com/itcbact/itcbact.github.io/tree/master/AMP/gallery/templates">links</a><br>
+    <a href="itcbact.github.io/AMP/multi-image-ads/multi-image.html">links</a><br>
 <a href="itcbact.github.io/AMP/land-see/templates/kim-myeong.amp.html">links</a><br>
     <a href="https://github.com/itcbact/itcbact.github.io/tree/master/AMP/gallery/templates">links</a><br>
 <a href="itcbact.github.io/AMP/land-see/templates/kim-myeong.amp.html">links</a><br>
     
- <ul style="list-style-type:square;">
-  <li>Coffee</li>
-  <li>Tea</li>
-  <li>Milk</li>
-</ul>     
-    
-    
+
     
 
-  <!--
-  ## Basic usage
-
-  The `amp-consent` component allows to specify the required user consent for this page. A CORS endpoints can be specified via the `checkConsentHref` attribute. The `amp-consent` component will check via a POST request if the consent UI needs to be shown. The response should look like this:
-
-  ```json
-  {
-    "promptIfUnknown": boolean (true/false)
-  }
-  ```
-
-  It is possible, to re-trigger the consent dialog using the `myConsent.prompt()` action. One use case for this is giving users the option to change their settings after consent dialog has been dismissed. For this to work, the post consent UI needs to be specified in the `amp-consent` JSON config: `"promptUI": "consentDialog"`.
-  -->
   <amp-consent id="myUserConsent" layout="nodisplay">
     <script type="application/json">{
       "consents": {
@@ -131,7 +112,13 @@
                   layout="fixed-height"
                   src="/static/samples/json/consent-items.json">
           <template type="amp-mustache">
-            <li>{{.}}</li>
+            <li> <ul style="list-style-type:square;">
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Milk</li>
+</ul>     
+    
+    </li>
           </template>
         </amp-list>
         <button on="tap:myUserConsent.accept">Accept</button>
