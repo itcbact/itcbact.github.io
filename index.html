@@ -131,15 +131,25 @@
       <button on="tap:myUserConsent.prompt()">Nun aggè capitt'!</button>
     </div>
   </amp-consent>
+  <div id="post-consent-ui">
+      <button on="tap:myUserConsent.prompt()">Update Consent</button>
+    </div>
+  </amp-consent>
 
   <!--
-     `data-block-on-consent` : blocca l-immagine jpg fino a che non si da l-ok, può essere utilizzata per bloccare ulteriore contenuto.
+    Use `data-block-on-consent` attribute to block AMP components until consent is given.
+    Individual AMP components can override  blocking behavior and implement blocking logic themselves.
+
+    Here is an image which is blocked until consent is given:
   -->
-  <amp-img data-block-on-consent src=" itcbact.github.io/presentazione/quadrocommerciale.png "  width="300" height="201" layout="adaptive">
+  <amp-img data-block-on-consent src="itcbact.github.io/presentazione/quadrocommerciale.png" width="300" height="201">
   </amp-img>
 
   <!--
-   `amp-ad` dipende su `amp-consent`: per far visualizzare i contenuti del reclame.
+  Ads can also be blocked until consent is given, but ad networks can implement own behavior
+  (e.g. default to non-personalized ads without consent, as seen <a href="https://support.google.com/dfp_premium/answer/7678538#amp-pages" target="_blank">
+  documented here</a> for Doubleclick). Note that you may see the same ad when accepting or rejecting consent for this specific example and that's because the example doesn't use personalized information even when accepting consent.<br/>
+  Here is an example of `amp-ad` depending on `amp-consent`:
  -->
  <amp-ad data-block-on-consent
          data-slot="/30497360/a4a/a4a_native"
@@ -148,5 +158,7 @@
          width="300">
   </amp-ad>
 
-  </body>
+
+</body>
 </html>
+    
