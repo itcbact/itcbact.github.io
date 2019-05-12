@@ -4,20 +4,21 @@
 <style>
 .grid-container {
   display: grid;
-  width: 750px;
+  width: 800px;
   height: 600px;
   grid-gap: 1rem;
   grid-template-columns:
-    [main-start sidebar-start] 10px
-    [sidebar-end content-start] 1fr
+    [main-start sidebar-start] 0px
+    [sidebar-end content-start] 50px
     [column3-start] 1fr
     [content-end main-end];
   grid-template-rows:
-    [row1-start] 180px
+    [row1-start] 280px
     [row2-start] 1fr
     [row3-start] 1fr
     [row4-start] 100px
-    [row4-end];
+    [row5-start] 50px
+    [row5-end];
 
 }
 
@@ -43,12 +44,12 @@
 
 .content-3 {
   grid-column: column3-start / content-end;
-  grid-row: row3-start / row4-start;
+  grid-row: row4-start / row5-start;
 }
 
 .footer {
   grid-column: main-start / main-end;
-  grid-row: row4-start / row4-end;
+  grid-row: row5-start / row5-end;
 }
 
 
