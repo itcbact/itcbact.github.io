@@ -212,48 +212,7 @@ body {
 </head>
 
 <body>
-  <!-- ## Define animations -->
-  <!-- To slide down the content below the docking slot, the vertical offset is changed into a `20px` positive offset to create padding below the slot. -->
-  <amp-animation layout="nodisplay" id="slideDown">
-    <script type="application/json">
-      {
-        "selector": ".more-content",
-        "duration": "0.5s",
-        "fill": "both",
-        "easing": "ease-out",
-        "keyframes": [{
-            "offset": 0,
-            "transform": "translateY(-16.85vw)"
-          },
-          {
-            "offset": 1,
-            "transform": "translateY(20px)"
-          }
-        ]
-      }
-    </script>
-  </amp-animation>
-  <!-- To slide up the content once the video is no longer docked, the animation reverts the aside content's offset to `-16.85vw`. -->
-  <amp-animation layout="nodisplay" id="slideUp">
-    <script type="application/json">
-      {
-        "selector": ".more-content",
-        "duration": "0.5s",
-        "fill": "both",
-        "easing": "ease-out",
-        "keyframes": [{
-            "offset": 0,
-            "transform": "translateY(20px)"
-          },
-          {
-            "offset": 1,
-            "transform": "translateY(-16.85vw)"
-          }
-        ]
-      }
-    </script>
-  </amp-animation>
-
+ 
   <main>
       <div class="content">
       <!-- ## Include your video -->
@@ -333,7 +292,48 @@ body {
   </main>
   
   <div class="grid-container">
-  <div class="item videoLogo">video_logo</div>
+  <div class="item videoLogo"> <!-- ## Define animations -->
+  <!-- To slide down the content below the docking slot, the vertical offset is changed into a `20px` positive offset to create padding below the slot. -->
+  <amp-animation layout="nodisplay" id="slideDown">
+    <script type="application/json">
+      {
+        "selector": ".more-content",
+        "duration": "0.5s",
+        "fill": "both",
+        "easing": "ease-out",
+        "keyframes": [{
+            "offset": 0,
+            "transform": "translateY(-16.85vw)"
+          },
+          {
+            "offset": 1,
+            "transform": "translateY(20px)"
+          }
+        ]
+      }
+    </script>
+  </amp-animation>
+  <!-- To slide up the content once the video is no longer docked, the animation reverts the aside content's offset to `-16.85vw`. -->
+  <amp-animation layout="nodisplay" id="slideUp">
+    <script type="application/json">
+      {
+        "selector": ".more-content",
+        "duration": "0.5s",
+        "fill": "both",
+        "easing": "ease-out",
+        "keyframes": [{
+            "offset": 0,
+            "transform": "translateY(20px)"
+          },
+          {
+            "offset": 1,
+            "transform": "translateY(-16.85vw)"
+          }
+        ]
+      }
+    </script>
+  </amp-animation>
+</div>
   <div class="item content-1">Content-1</div>
   <div class="item content-2">Content-2</div>
   <div class="item content-3">Content-3</div>
