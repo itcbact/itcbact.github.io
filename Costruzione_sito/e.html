@@ -1,0 +1,199 @@
+1
+
+<!DOCTYPE html>
+
+2
+
+<html>
+
+3
+
+<head>
+
+4
+
+<style>
+
+5
+
+.grid-container {
+
+6
+
+  display: grid;
+
+7
+
+  width: 800px;
+
+8
+
+  height: 600px;
+
+9
+
+  grid-template-columns:
+
+10
+
+    [main-start sidebar-start] 0px
+
+11
+
+    [sidebar-end content-start] 100px
+
+12
+
+    [column3-start] 1fr
+
+13
+
+    [content-end main-end];
+
+14
+
+  grid-template-rows:
+
+15
+
+    [row1-start] 100px
+
+16
+
+    [row2-start] 1fr
+
+17
+
+    [row3-start] 1fr
+
+18
+
+    [row4-start] 100px
+
+19
+
+    [row5-start] 50px
+
+20
+
+    [row5-end];
+
+21
+
+}
+
+22
+
+.videoLogo {
+
+23
+
+  grid-column: main-start / main-end;
+
+24
+
+  grid-row: row1-start / row2-start;
+
+25
+
+}
+
+26
+
+.content-1 {
+
+27
+
+  grid-column: content-start / main-end;
+
+28
+
+  grid-row: row2-start / row3-start;
+
+29
+
+}
+
+30
+
+.content-2 {
+
+31
+
+  grid-column: content-start / content-end;
+
+32
+
+  grid-row: row3-start / row4-start;
+
+33
+
+}
+
+34
+
+.content-3 {
+
+35
+
+  grid-column: content-start / content-end;
+
+36
+
+  grid-row: row4-start / row5-start;
+
+37
+
+}
+
+38
+
+.footer {
+
+39
+
+  grid-column: main-start / main-end;
+
+40
+
+  grid-row: row5-start / row5-end;
+
+41
+
+}
+
+42
+
+/* OTHER STYLES */
+
+43
+
+body {
+
+44
+
+  background-color: #3b404e;
+
+45
+
+  display: flex;
+
+46
+
+  justify-content: center;
+
+47
+
+  padding: 20px;
+
+48
+
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+49
+
+}
+
+50
+
+.item {
