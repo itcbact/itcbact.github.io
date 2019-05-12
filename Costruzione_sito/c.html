@@ -6,45 +6,52 @@
   display: grid;
   width: 800px;
   height: 600px;
-  grid-gap: 1rem;
   grid-template-columns:
     [main-start sidebar-start] 0px
-    [sidebar-end content-start] 50px
+    [sidebar-end content-start] 100px
     [column3-start] 1fr
     [content-end main-end];
   grid-template-rows:
-    [row1-start] 280px
+    [row1-start] 100px
     [row2-start] 1fr
     [row3-start] 1fr
     [row4-start] 100px
     [row5-start] 50px
     [row5-end];
+
 }
+
 .videoLogo {
   grid-column: main-start / main-end;
   grid-row: row1-start / row2-start;
 }
-.sidebar {
-  grid-column: sidebar-start / sidebar-end;
-  grid-row: row2-start / row4-start;
-}
+
 .content-1 {
-  grid-column: content-start / content-end;
+  grid-column: content-start / main-end;
   grid-row: row2-start / row3-start;
 }
+
 .content-2 {
-  grid-column: content-start / column3-start;
+  grid-column: content-start / content-end;
   grid-row: row3-start / row4-start;
 }
+
 .content-3 {
-  grid-column: column3-start / content-end;
+  grid-column: content-start / content-end;
   grid-row: row4-start / row5-start;
 }
+
 .footer {
   grid-column: main-start / main-end;
   grid-row: row5-start / row5-end;
 }
+
+
+
+
+
 /* OTHER STYLES */
+
 body {
   background-color: #3b404e;
   display: flex;
@@ -52,6 +59,7 @@ body {
   padding: 20px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
+
 .item {
   background-color: #1EAAFC;
   background-image: linear-gradient(130deg, #6C52D9 0%, #1EAAFC 85%, #3EDFD7 100%);
@@ -65,18 +73,18 @@ body {
   font-size: 18px;
   font-weight: bold;
 }
+
 .header {
   background-color: #1EAAFC;
   background-image: linear-gradient(160deg, #6C52D9 0%, #9B8AE6 127%);
 }
-.sidebar {
-  background-image: linear-gradient(203deg, #3EDFD7 0%, #29A49D 90%)
-}
+
 .content-1,
 .content-2,
 .content-3 {
   background-image: linear-gradient(130deg, #6C52D9 0%, #1EAAFC 85%, #3EDFD7 100%);
 }
+
 .footer {
   background-color: #6C52D9;
   background-image: linear-gradient(160deg, #6C52D9 0%, #9B8AE6 127%);
@@ -89,7 +97,18 @@ body {
 
 <p>Use the <em>align-content</em> property to vertically align the grid inside the container.</p>
 
-<p>-ho voluto conservare questo codice per fare un esempio su come il CSS modificasse le righe in linea con i dati delle colonne si potrebbe fare un paragone con la griglia della battaglia navale, in cui se si da il valore ad una colonna e riga come due ascisse, due assi della X e delle Y è possibile determinare la posizion spaziale in cui far recapitare i nostri contenuti.</p>
+<p>Per ovviare a tali problematiche ho settato tutti i valori delle colonne e delle righe che combaciassero per valori CSS dell'intera griglia sià per CONTENT 2 che CONTENT 3.
+ <div> i valori sono impostanti su: 
+.content-2 {
+  grid-column: content-start / content-end;
+  grid-row: row3-start / row4-start;
+}
+
+.content-3 {
+  grid-column: content-start / content-end;
+  grid-row: row4-start / row5-start;
+}
+ ma anche settare le collone su quelli prescritti in main-start e main-end, avrebbero prodotto gli stessi risultati.</p>
 
 
 <!--il passo successivo è stato quello di allineare tutti i contenuti in maniera tale che corrispondessero i formati dei contenuti all'interno della griglia.
