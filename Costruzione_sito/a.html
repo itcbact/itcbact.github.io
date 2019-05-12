@@ -1,0 +1,129 @@
+<!--come prima cosa ho reputato necessario creare una griglia che rappresentasse un ordine CSS dei contenuti da visualizzare, per ulteriori informazioni consultate questo indirizzo:"https://www.w3schools.com/css/css_grid_container.asp"
+o "https://mozilladevelopers.github.io/playground/css-grid/";
+Sto faccendo tutto ciò tenendo come esempio il nostro sito "provetta" caricato sulla nostra piattaforma: "https://itcbact.github.io/folhtml/"
+Ho successivamente diviso il layout in 5 <div>, ciascuna identificata e collocata opportunamente nel "layout" del sito
+Per ciascuno di essi ho copiato i valori così come ispezionati dal sito in questione.
+il primo div lo ho chiamato videoLogo
+
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.grid-container {
+  display: grid;
+  width: 750px;
+  height: 600px;
+  grid-gap: 1rem;
+  grid-template-columns:
+    [main-start sidebar-start] 10px
+    [sidebar-end content-start] 1fr
+    [column3-start] 1fr
+    [content-end main-end];
+  grid-template-rows:
+    [row1-start] 180px
+    [row2-start] 1fr
+    [row3-start] 1fr
+    [row4-start] 100px
+    [row4-end];
+
+}
+
+.videoLogo {
+  grid-column: main-start / main-end;
+  grid-row: row1-start / row2-start;
+}
+
+.sidebar {
+  grid-column: sidebar-start / sidebar-end;
+  grid-row: row2-start / row4-start;
+}
+
+.content-1 {
+  grid-column: content-start / content-end;
+  grid-row: row2-start / row3-start;
+}
+
+.content-2 {
+  grid-column: content-start / column3-start;
+  grid-row: row3-start / row4-start;
+}
+
+.content-3 {
+  grid-column: column3-start / content-end;
+  grid-row: row3-start / row4-start;
+}
+
+.footer {
+  grid-column: main-start / main-end;
+  grid-row: row4-start / row4-end;
+}
+
+
+
+
+
+/* OTHER STYLES */
+
+body {
+  background-color: #3b404e;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.item {
+  background-color: #1EAAFC;
+  background-image: linear-gradient(130deg, #6C52D9 0%, #1EAAFC 85%, #3EDFD7 100%);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  color: #ffffff;
+  border-radius: 4px;
+  border: 6px solid #171717;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.header {
+  background-color: #1EAAFC;
+  background-image: linear-gradient(160deg, #6C52D9 0%, #9B8AE6 127%);
+}
+
+.sidebar {
+  background-image: linear-gradient(203deg, #3EDFD7 0%, #29A49D 90%)
+}
+
+.content-1,
+.content-2,
+.content-3 {
+  background-image: linear-gradient(130deg, #6C52D9 0%, #1EAAFC 85%, #3EDFD7 100%);
+}
+
+.footer {
+  background-color: #6C52D9;
+  background-image: linear-gradient(160deg, #6C52D9 0%, #9B8AE6 127%);
+}
+</style>
+</head>
+<body>
+
+<h1>The align-content Property</h1>
+
+<p>Use the <em>align-content</em> property to vertically align the grid inside the container.</p>
+
+<p>The value "end" will align the rows at the end of the container:</p>
+
+<div class="grid-container">
+  <div class="item videoLogo">video_logo</div>
+  <div class="item content-1">Content-1</div>
+  <div class="item content-2">Content-2</div>
+  <div class="item content-3">Content-3</div>
+  <div class="item footer">footer</div>
+</div>
+
+</body>
+</html>
