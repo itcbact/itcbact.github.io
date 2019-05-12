@@ -1,199 +1,109 @@
-1
-
 <!DOCTYPE html>
-
-2
-
 <html>
-
-3
-
 <head>
-
-4
-
 <style>
-
-5
-
 .grid-container {
-
-6
-
   display: grid;
-
-7
-
   width: 800px;
-
-8
-
   height: 600px;
-
-9
-
   grid-template-columns:
-
-10
-
     [main-start sidebar-start] 0px
-
-11
-
     [sidebar-end content-start] 100px
-
-12
-
     [column3-start] 1fr
-
-13
-
     [content-end main-end];
-
-14
-
   grid-template-rows:
-
-15
-
     [row1-start] 100px
-
-16
-
     [row2-start] 1fr
-
-17
-
     [row3-start] 1fr
-
-18
-
-    [row4-start] 100px
-
-19
-
-    [row5-start] 50px
-
-20
-
+    [row4-start] 1fr
+    [row5-start] 1fr
     [row5-end];
-
-21
-
 }
-
-22
-
 .videoLogo {
-
-23
-
   grid-column: main-start / main-end;
-
-24
-
   grid-row: row1-start / row2-start;
-
-25
-
 }
-
-26
-
 .content-1 {
-
-27
-
   grid-column: content-start / main-end;
-
-28
-
   grid-row: row2-start / row3-start;
-
-29
-
 }
-
-30
-
 .content-2 {
-
-31
-
   grid-column: content-start / content-end;
-
-32
-
   grid-row: row3-start / row4-start;
-
-33
-
 }
+.content-3 {
+  grid-column: content-start / content-end;
+  grid-row: row4-start / row5-start;
+}
+.footer {
+  grid-column: main-start / main-end;
+  grid-row: row5-start / row5-end;
+}
+/* OTHER STYLES */
+body {
+  background-color: #3b404e;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+.item {
+  background-color: #1EAAFC;
+  background-image: linear-gradient(130deg, #6C52D9 0%, #1EAAFC 85%, #3EDFD7 100%);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  color: #ffffff;
+  border-radius: 4px;
+  border: 6px solid #171717;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+.header {
+  background-color: #1EAAFC;
+  background-image: linear-gradient(160deg, #6C52D9 0%, #9B8AE6 127%);
+}
+.content-1,
+.content-2,
+.content-3 {
+  background-image: linear-gradient(130deg, #6C52D9 0%, #1EAAFC 85%, #3EDFD7 100%);
+}
+.footer {
+  background-color: #6C52D9;
+  background-image: linear-gradient(160deg, #6C52D9 0%, #9B8AE6 127%);
+}
+</style>
+</head>
+<body>
 
-34
+
+
+<!--il passo successivo è stato quello di allineare tutti i contenuti in maniera tale che corrispondessero i formati dei contenuti all'interno della griglia.
+-->
+<div class="grid-container">
+  <div class="item videoLogo">video_logo</div>
+  <div class="item content-1">
+<h1>Step 2, allineamento contenuti</h1>
+
+<p>Use the <em>align-content</em> property to vertically align the grid inside the container.</p>
+
+<p>Per ovviare a tali problematiche ho settato tutti i valori delle colonne e delle righe che combaciassero per valori CSS dell'intera griglia sià per CONTENT 2 che CONTENT 3.
+ i valori sono impostanti su: 
+.content-2 {
+  grid-column: content-start / content-end;
+  grid-row: row3-start / row4-start;
+}
 
 .content-3 {
-
-35
-
   grid-column: content-start / content-end;
-
-36
-
   grid-row: row4-start / row5-start;
-
-37
-
 }
+ ma anche settare le collone su quelli prescritti in main-start e main-end, avrebbero prodotto gli stessi risultati.</p></div>
+  <div class="item content-2">Content-2</div>
+  <div class="item content-3">Content-3</div>
+  <div class="item footer">footer</div>
+</div>
 
-38
-
-.footer {
-
-39
-
-  grid-column: main-start / main-end;
-
-40
-
-  grid-row: row5-start / row5-end;
-
-41
-
-}
-
-42
-
-/* OTHER STYLES */
-
-43
-
-body {
-
-44
-
-  background-color: #3b404e;
-
-45
-
-  display: flex;
-
-46
-
-  justify-content: center;
-
-47
-
-  padding: 20px;
-
-48
-
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-
-49
-
-}
-
-50
-
-.item {
+</body>
+</html>
