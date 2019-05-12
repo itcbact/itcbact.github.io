@@ -214,24 +214,7 @@ body {
 <body>
  
   <main>
-      <div class="content">
-      <!-- ## Include your video -->
-      <!-- In your [`<amp-video>`]({{g.doc('/content/amp-dev/documentation/components/reference/amp-video.md', locale=doc.locale).url.path}}) tag, you should include the `dock` attribute to specify that the video should be minimized to corner on scroll. By setting a value on the attribute, we're specifying which docking slot we're using via a CSS selector.-->
-       <amp-video
-    autoplay
-    src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
-    poster="https://peach.blender.org/wp-content/uploads/bbb-splash.png"
-    artwork="img/bigbuckbunny.jpg"
-    title="Big Buck Bunny"
-    album="Blender"
-    artist="Blender Foundation"
-    width="720"
-    height="405"
-    layout="responsive"
-    controls>
-  </amp-video>
-      
-          <source type="video/mp4" src="/static/samples/video/tokyo.mp4"></amp-video>
+     
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam facilisis odio vitae sem ornare laoreet. Mauris
         sodales convallis eros, non imperdiet mauris ullamcorper eget. Aenean tempus augue eu nisl consectetur
         sagittis. Morbi vel nunc eu leo tristique vehicula. Sed finibus velit luctus, scelerisque mauris luctus,
@@ -291,8 +274,27 @@ body {
    
   </main>
   
-  <div class="grid-container">
-  <div class="item videoLogo"> <!-- ## Define animations -->
+  <div class="grid-container" layout=responsive>
+  <div class="item videoLogo">
+     <div class="content">
+      <!-- ## Include your video -->
+      <!-- In your [`<amp-video>`]({{g.doc('/content/amp-dev/documentation/components/reference/amp-video.md', locale=doc.locale).url.path}}) tag, you should include the `dock` attribute to specify that the video should be minimized to corner on scroll. By setting a value on the attribute, we're specifying which docking slot we're using via a CSS selector.-->
+       <amp-video
+    autoplay
+    src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+    poster="https://peach.blender.org/wp-content/uploads/bbb-splash.png"
+    artwork="img/bigbuckbunny.jpg"
+    title="Big Buck Bunny"
+    album="Blender"
+    artist="Blender Foundation"
+    width="720"
+    height="405"
+    layout="responsive"
+    controls>
+  </amp-video>
+      
+          <source type="video/mp4" src="/static/samples/video/tokyo.mp4"></amp-video>
+    <!-- ## Define animations -->
   <!-- To slide down the content below the docking slot, the vertical offset is changed into a `20px` positive offset to create padding below the slot. -->
   <amp-animation layout="nodisplay" id="slideDown">
     <script type="application/json">
