@@ -20,6 +20,9 @@
   <!-- Include the [`amp-animation`]({{g.doc('/content/amp-dev/documentation/components/reference/amp-animation.md', locale=doc.locale).url.path}})
   extension to animate the `<aside>` element on `dock` and `undock`.  -->
   <script async custom-element="amp-animation" src="https://cdn.ampproject.org/v0/amp-animation-0.1.js"></script>
+  
+    <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
+  
   <title>Advanced Video Docking</title>
   <link rel="canonical" href="https://amp.dev/documentation/examples/multimedia-animations/advanced_video_docking/index.html">
   <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
@@ -179,7 +182,7 @@
   </amp-animation>
 
   <main>
-    <div class="content">
+      <div class="content">
       <!-- ## Include your video -->
       <!-- In your [`<amp-video>`]({{g.doc('/content/amp-dev/documentation/components/reference/amp-video.md', locale=doc.locale).url.path}}) tag, you should include the `dock` attribute to specify that the video should be minimized to corner on scroll. By setting a value on the attribute, we're specifying which docking slot we're using via a CSS selector.-->
        <amp-video
@@ -229,6 +232,30 @@
         tincidunt cursus libero. Integer sed pulvinar elit. Suspendisse ex nisi, egestas ac ante fringilla, convallis
         tempor ipsum. Quisque est odio, gravida ac malesuada vitae, scelerisque vel quam.</p>
     </div>
+  <div>
+    <amp-carousel width="400"
+  height="300"
+  layout="responsive"
+  type="slides"
+  autoplay
+  delay="2000">
+  <amp-img src="/static/samples/img/image1.jpg"
+    width="400"
+    height="300"
+    layout="responsive"
+    alt="a sample image"></amp-img>
+  <amp-img src="/static/samples/img/image2.jpg"
+    width="400"
+    height="300"
+    layout="responsive"
+    alt="another sample image"></amp-img>
+  <amp-img src="/static/samples/img/image3.jpg"
+    width="400"
+    height="300"
+    layout="responsive"
+    alt="and another sample image"></amp-img>
+</amp-carousel>
+  </div>
     <aside>
       <!-- ## Include the docking slot. -->
       <!-- Set width and height to `16:9`. Since its layout is `responsive`, the slot will expand to fill the aside's width while preserving aspect ratio.
